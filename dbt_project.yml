@@ -34,7 +34,17 @@ models:
     # Config indicated by + and applies to all files under models/example/
     staging:
       +materialized: view
+      +schema:  STAGING
       snowflake_warehouse: portfolio_wh
     marts:
       +materialized: table
+      +schema: PORTFOLIO_SCHEMA
       snowflake_warehouse: portfolio_wh
+    refined:
+      +materialized: view
+      +schema: REFINED
+      snowflake_warehouse: portfolio_wh
+    
+snapshots:
+  portfolio_tracking:
+    +target_schema: SNAPSHOTS
