@@ -38,7 +38,7 @@ models:
       snowflake_warehouse: portfolio_wh
     marts:
       +materialized: table
-      +schema: PORTFOLIO_SCHEMA
+      +schema: MARTS
       snowflake_warehouse: portfolio_wh
     refined:
       +materialized: view
